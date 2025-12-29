@@ -1,0 +1,63 @@
+.girlimage {
+  height: 200px;
+  width: 200px;
+  border-radius: 50%;
+}
+
+.profile {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  gap: 15px;
+}
+.profile img {
+  margin-top: 30px;
+}
+.profile h1 {
+  text-align: center;
+  width: 70%;
+  font-size: 60px;
+  font-weight: 600;
+}
+.profile p {
+  text-align: center;
+  width: 50%;
+  font-size: 24px;
+  line-height: 40px;
+  font-family:serif;
+  
+}
+.profile h1 span {
+  background: linear-gradient(270deg, #da7c25 0.36%, #b923e1 102.06%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.profile-button {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+  font-size: 24px;
+  font-weight: 500px;
+  margin-bottom: 50px;
+  border: none;
+}
+.btn:hover {
+    border: 2px solid white;
+}
+
+.profile-rusume {
+  padding: 10px 20px;
+  border-radius: 20px;
+  border: 2px solid #fff;
+  cursor: pointer;
+  background-color: transparent;
+  color: white;
+}
+.profile-rusume:hover {
+    border-color: #b923e1;
+}
+
+

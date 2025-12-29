@@ -1,0 +1,87 @@
+.image-logo {
+  height: 50px;
+  width: 50px;
+  border-radius: 10px;
+}
+
+.footer-title-image {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  margin: 20px 120px;
+}
+
+.footer-img-card p {
+  width: 80%;
+  line-height: 20px;
+}
+
+.footer-img-card {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.email-footer-card input {
+  width: 300px;
+  height: 40px;
+  background-color: gray;
+  border-radius: 20px;
+}
+
+input::placeholder {
+  color: white;
+  font-size: 13px;
+  padding-left: 12px;
+}
+
+.email-footer-card {
+  display: flex;
+  gap: 10px;
+}
+
+.subscribe-button {
+  padding: 10px 20px;
+  border-radius: 15px;
+  background: linear-gradient(270deg, #da7c25 0.36%, #b923e1 102.06%);
+color: white;
+}
+
+.hr-line{
+  border: none;
+  height: 2px;
+  background-color: white;
+margin-left: 160px;
+margin-right: 160px;
+  
+}
+
+.card {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+  
+}
+
+.footer-name-card {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    
+    
+}
+.footer-para p{
+  margin-right: 190px;
+  margin-top: 5px;
+}
+.names p{
+   margin-top: 5px;
+}
+
+.names {
+    display: flex;
+    gap: 50px;
+    
+   
+}

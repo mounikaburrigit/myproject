@@ -1,0 +1,103 @@
+.contact {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 80px;
+  margin: 80px 170px;
+}
+.contact-title {
+  position: relative;
+}
+.contact-title h1 {
+  padding: 0px 30px;
+  font-size: 80px;
+  font-weight: 600;
+}
+.contact-title img {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  z-index: -1;
+}
+
+.contact-left {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.contact-left h1 {
+  font-size: 80px;
+  font-weight: 700;
+  background: linear-gradient(270deg, #da7c25 0.36%, #b923e1 102.06%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+}
+.contact-left p {
+  max-width: 550px;
+  line-height: 35px;
+}
+.icons {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+}
+
+.icon {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  align-items: center;
+}
+
+.contact-section {
+  display: flex;
+  flex-direction: row;
+  gap: 150px;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.inputs {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.inputs input {
+  width: 500px;
+  height: 50px;
+  background-color: gray;
+  border-radius: 10px;
+}
+
+.inputs textarea {
+  background-color: gray;
+  border-radius: 10px;
+  width: 500px;
+  height: 300px;
+}
+
+.submit-button-now {
+  background: linear-gradient(270deg, #da7c25 0.36%, #b923e1 102.06%);
+  padding: 10px 20px;
+  border-radius: 10px;
+  color: white;
+}
+
+.input::placeholder {
+  color: white;
+}
+
+.my-textarea {
+  color: white;  /* text color */
+  background-color: #fff; /* optional */
+  border: 1px solid #ccc;
+  padding: 8px;
+}

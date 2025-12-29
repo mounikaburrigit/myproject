@@ -1,0 +1,54 @@
+.image-logo {
+  height: 50px;
+  width: 50px;
+  border-radius: 10PX;
+}
+
+.navbar {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin: 20px 170px;
+}
+
+.navbar-menu {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 60px;
+  list-style: none;
+  font-size: 20px;
+}
+
+.navbar-menu li a {
+  text-decoration: none; /* removes underline */
+  color: #ffffff;         /* white color */
+  font-weight: 500;       /* medium font weight */
+  padding: 5px 10px;      /* optional spacing around text */
+  transition: color 0.3s, border-bottom 0.3s;
+  position: relative;
+}
+
+/* Optional: add hover effect */
+.navbar-menu li a:hover {
+  color: #b923e1; /* change color on hover */
+  border-bottom: 2px solid #ff6347; /* small underline on hover */
+}
+
+
+.nav-connect {
+}
+
+.connect-button {
+  padding: 10px 20px;
+  border-radius: 20px;
+  background: linear-gradient(267deg, #da7c25 0.36%, #b923e1 102.06%);
+  cursor: pointer;
+  transition: 0.5s;
+  color: white;
+}
+
+.connect-button:hover {
+    transform: scale(1.05);
+}
