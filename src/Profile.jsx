@@ -1,6 +1,6 @@
 import React from "react";
 // import girlimage from "./assets/girlimage.jpg";
-import "./Profile.css";
+import "./profile.css";
 function Profile() {
   const connectNaukari=()=>{
     window.open(
