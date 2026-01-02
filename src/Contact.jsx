@@ -8,13 +8,13 @@ import call_icon from "./assets/call_icon.svg";
 import location_icon from "./assets/location_icon.svg";
 import emailjs from "@emailjs/browser";
 
-
 import "./contact.css";
 function Contact() {
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    emailjs.sendForm(
+    emailjs
+      .sendForm(
         "service_lki48vd", // Service ID from Step 2
         "template_qe635pc", // Template ID from Step 3
         e.target,
@@ -32,16 +32,16 @@ function Contact() {
   return (
     <div className="contact" id="contact">
       <div className="contact-title">
-        <h1>GEt In Touch</h1>
+        <h1>Get In Touch</h1>
         <img src={theme} alt="" />
       </div>
       <div className="contact-section">
         <div className="contact-left">
-          <h1>Let'S talk</h1>
-          <p>
-            I'm currently avaliable to take on new projects, so feel free to
+          <h1 className="heading">Let's Talk</h1>
+          <p className="paragraph">
+            I'm currently available to take on new projects, so feel free to
             send me a message about anything that you want me to work on. You
-            can contact anytime.
+            can contact me anytime.
           </p>
           <div className="icons">
             <div className="icon">
@@ -75,8 +75,10 @@ function Contact() {
               </div>
               <div className="inputs">
                 <label>Write your message here</label>
-                <textarea className="my-textarea" placeholder="Enter your message" name="message"></textarea>
-
+                <textarea
+                  placeholder="Enter your message"
+                  name="message"
+                ></textarea>
               </div>
               <div>
                 <button type="submit" className="submit-button-now">

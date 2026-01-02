@@ -1,34 +1,48 @@
-import React from "react";
-import logoImg from "./assets/logoImg.jpg";
+import React, { useState } from "react";
 import "./navbar.css";
-import { Link } from "react-router-dom";
 
 function Navbar() {
+  const [menuOpen, setMenuOpen] = useState(false);
+
   const connectwithme = () => {
     window.open("https://www.naukri.com/mnjuser/profile", "_blank");
   };
+
   return (
     <div className="navbar">
-      <img src={logoImg} className="image-logo" alt="" />
-      <ul className="navbar-menu">
+      <div className="logo-text"><span>MB</span></div>
+
+      <ul className={`navbar-menu ${menuOpen ? "active" : ""}`}>
         <li>
-          <a href="#home">Home</a>
+          <a href="#home" onClick={() => setMenuOpen(false)}>
+            Home
+          </a>
         </li>
         <li>
-          <a href="#about">About</a>
+          <a href="#about" onClick={() => setMenuOpen(false)}>
+            About
+          </a>
         </li>
         <li>
-          <a href="#work">Work</a>
+          <a href="#work" onClick={() => setMenuOpen(false)}>
+            Work
+          </a>
         </li>
         <li>
-          <a href="#contact">Contact</a>
+          <a href="#contact" onClick={() => setMenuOpen(false)}>
+            Contact
+          </a>
         </li>
-         
       </ul>
+
       <div className="nav-connect">
         <button className="connect-button" onClick={connectwithme}>
           Connect with me
         </button>
+      </div>
+
+      <div className="menu-icon" onClick={() => setMenuOpen(!menuOpen)}>
+        {menuOpen ? "✖" : "☰"}
       </div>
     </div>
   );

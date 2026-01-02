@@ -1,72 +1,80 @@
-import React, { useState } from "react";
+import React from "react";
 import "./footer.css";
-import logoImg from "./assets/logoImg.jpg";
-import emailjs from "@emailjs/browser";
 
 function Footer() {
-  const [email, setEmail] = useState("");
+  const currentYear = new Date().getFullYear();
 
-  const handleSubscribe = (e) => {
-    e.preventDefault();
-
-    if (!email) {
-      alert("Please enter your email!");
-      return;
+  const scrollToSection = (sectionId) => {
+    const element = document.getElementById(sectionId);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
     }
-
-    emailjs
-      .send(
-        "service_lki48vd",       // Your Service ID
-        "template_qe635pc",      // Your Template ID
-        { subscriber_email: email },
-        "Os0QhNgg9VKjhOO0M"         // Your Public Key
-      )
-      .then(() => {
-        alert(`Thank you for subscribing, ${email}!`);
-        setEmail("");
-      })
-      .catch(() => {
-        alert("Failed to send subscription email. Try again.");
-      });
   };
 
   return (
-    <div className="footer" id="footer">
-      <div className="footer-title-image">
-        <div className="footer-img-card">
-          <img src={logoImg} alt="" className="image-logo" />
-          <p>
-            I am a frontend developer from USA with 10 years of experience in
-            companies like Cl Infotech Private Limited
-          </p>
+    <footer className="footer" id="footer">
+      <div className="footer-container">
+        <div className="footer-content">
+          {/* Brand Section */}
+          <div className="footer-brand">
+            <div className="footer-logo">MB</div>
+            <p className="footer-description">
+              Front-End React Developer passionate about creating exceptional web experiences 
+              and delivering high-quality solutions.
+            </p>
+          </div>
+
+          {/* Quick Links */}
+          <div className="footer-section">
+            <h3 className="footer-heading">Quick Links</h3>
+            <ul className="footer-links">
+              <li><a href="#home" onClick={(e) => { e.preventDefault(); scrollToSection('home'); }}>Home</a></li>
+              <li><a href="#about" onClick={(e) => { e.preventDefault(); scrollToSection('about'); }}>About</a></li>
+              <li><a href="#work" onClick={(e) => { e.preventDefault(); scrollToSection('work'); }}>Work</a></li>
+              <li><a href="#contact" onClick={(e) => { e.preventDefault(); scrollToSection('contact'); }}>Contact</a></li>
+            </ul>
+          </div>
+
+          {/* Values Section */}
+          <div className="footer-section">
+            <h3 className="footer-heading">Core Values</h3>
+            <ul className="footer-links">
+              <li>🚀 Innovation</li>
+              <li>💡 Problem Solving</li>
+              <li>🤝 Collaboration</li>
+              <li>📈 Growth</li>
+            </ul>
+          </div>
+
+          {/* Contact Info */}
+          <div className="footer-section">
+            <h3 className="footer-heading">Get In Touch</h3>
+            <ul className="footer-contact">
+              <li>
+                <span className="contact-label">Email:</span>
+                <a href="mailto:mounikaburri21@gmail.com">mounikaburri21@gmail.com</a>
+              </li>
+              <li>
+                <span className="contact-label">Location:</span>
+                <span>Hyderabad, India</span>
+              </li>
+            </ul>
+          </div>
         </div>
-        <div className="email-footer-card">
-          <input
-            type="email"
-            placeholder="Enter Your email"
-            className="input-color"
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
-          />
-          <button className="subscribe-button" onClick={handleSubscribe}>
-            Subscribe
-          </button>
-          
+
+        {/* Bottom Bar */}
+        <div className="footer-bottom">
+          <div className="footer-copyright">
+            <p>© {currentYear} Mounika Burri. All rights reserved.</p>
+          </div>
+          <div className="footer-legal">
+            <a href="#" onClick={(e) => e.preventDefault()}>Terms of Service</a>
+            <span className="separator">|</span>
+            <a href="#" onClick={(e) => e.preventDefault()}>Privacy Policy</a>
+          </div>
         </div>
-        
       </div>
-      <hr className="hr-line" />
-      <div className="footer-name-card">
-        <div className="footer-para">
-          <p>© 2022 Mounika Burri. All rights reserved.</p>
-        </div>
-        <div className="names">
-          <p>Terms of Services</p>
-          <p>Privacy Policy</p>
-          <p>Connect with me</p>
-        </div>
-      </div>
-    </div>
+    </footer>
   );
 }
 

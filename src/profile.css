@@ -1,7 +1,19 @@
 .girlimage {
-  height: 200px;
-  width: 200px;
+  height: 240px;
+  width: 240px;
   border-radius: 50%;
+  object-fit: cover;
+  border: 4px solid transparent;
+  background: linear-gradient(135deg, #da7c25, #b923e1) padding-box,
+              linear-gradient(135deg, #da7c25, #b923e1) border-box;
+  box-shadow: 0 8px 32px rgba(185, 35, 225, 0.4);
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+}
+
+.girlimage:hover {
+  transform: scale(1.05);
+  box-shadow: 0 12px 48px rgba(185, 35, 225, 0.6);
 }
 
 .profile {
@@ -10,24 +22,55 @@
   align-items: center;
   justify-content: center;
   width: 100%;
-  gap: 15px;
+  gap: 20px;
+  padding: 70px 80px;
+  margin: 0 auto;
+  max-width: 1400px;
+  box-sizing: border-box;
+  position: relative;
 }
+
+.profile::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 600px;
+  height: 600px;
+  background: radial-gradient(circle, rgba(185, 35, 225, 0.1) 0%, transparent 70%);
+  border-radius: 50%;
+  z-index: -1;
+  filter: blur(60px);
+}
+
 .profile img {
-  margin-top: 30px;
+  margin-top: 0;
+  z-index: 1;
 }
 .profile h1 {
   text-align: center;
-  width: 70%;
-  font-size: 60px;
-  font-weight: 600;
+  width: 80%;
+  max-width: 900px;
+  font-size: 64px;
+  font-weight: 700;
+  font-family: 'Inter', sans-serif;
+  letter-spacing: -0.02em;
+  line-height: 1.2;
+  margin: 20px 0;
+  z-index: 1;
 }
 .profile p {
   text-align: center;
-  width: 50%;
-  font-size: 24px;
-  line-height: 40px;
-  font-family:serif;
-  
+  width: 70%;
+  max-width: 700px;
+  font-size: 20px;
+  line-height: 1.8;
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
+  color: rgba(255, 255, 255, 0.85);
+  letter-spacing: 0.01em;
+  z-index: 1;
 }
 .profile h1 span {
   background: linear-gradient(270deg, #da7c25 0.36%, #b923e1 102.06%);
@@ -38,26 +81,100 @@
 .profile-button {
   display: flex;
   align-items: center;
-  gap: 25px;
-  font-size: 24px;
-  font-weight: 500px;
+  gap: 20px;
+  font-size: 16px;
+  font-weight: 500;
+  font-family: 'Inter', sans-serif;
   margin-bottom: 50px;
+  margin-top: 20px;
   border: none;
+  letter-spacing: 0.02em;
+  z-index: 1;
+  flex-wrap: wrap;
+  justify-content: center;
 }
-.btn:hover {
-    border: 2px solid white;
+
+.connect-button {
+  padding: 16px 36px;
+  border-radius: 12px;
+  background: linear-gradient(270deg, #da7c25 0.36%, #b923e1 102.06%);
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  color: white;
+  font-family: 'Inter', sans-serif;
+  font-weight: 600;
+  font-size: 16px;
+  letter-spacing: 0.02em;
+  border: none;
+  box-shadow: 0 4px 16px rgba(185, 35, 225, 0.3);
+}
+
+.connect-button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 24px rgba(185, 35, 225, 0.5);
+  filter: brightness(1.1);
 }
 
 .profile-rusume {
-  padding: 10px 20px;
-  border-radius: 20px;
-  border: 2px solid #fff;
+  padding: 16px 36px;
+  border-radius: 12px;
+  border: 2px solid rgba(255, 255, 255, 0.3);
   cursor: pointer;
-  background-color: transparent;
+  background-color: rgba(255, 255, 255, 0.05);
   color: white;
+  font-family: 'Inter', sans-serif;
+  font-weight: 600;
+  font-size: 16px;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  letter-spacing: 0.02em;
 }
 .profile-rusume:hover {
-    border-color: #b923e1;
+  border-color: #b923e1;
+  background-color: rgba(185, 35, 225, 0.1);
+  transform: translateY(-3px);
+  box-shadow: 0 8px 24px rgba(185, 35, 225, 0.4);
 }
 
+@media screen and (max-width: 1024px) {
+  .profile {
+    padding: 80px 40px;
+  }
+  .profile h1 {
+    font-size: 48px;
+  }
+}
 
+@media screen and (max-width: 768px) {
+  .profile {
+    padding: 60px 20px;
+  }
+  .girlimage {
+    height: 180px;
+    width: 180px;
+  }
+  .profile h1 span {
+    font-size: 24px;
+  }
+  .profile h1 {
+    font-size: 36px;
+    font-weight: 700;
+    letter-spacing: -0.01em;
+    width: 90%;
+  }
+  .profile p {
+    text-align: center;
+    font-size: 16px;
+    width: 90%;
+    line-height: 1.7;
+  }
+  .profile-button {
+    font-size: 14px;
+    flex-direction: column;
+    width: 100%;
+  }
+  .connect-button,
+  .profile-rusume {
+    width: 100%;
+    max-width: 300px;
+  }
+}

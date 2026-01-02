@@ -17,7 +17,7 @@ function Profile() {
   }
   return (
     <div className="profile" id="home">
-      <img src="https://i.ibb.co/h1rC4VNJ/Whats-App-Image-2025-12-29-at-4-04-37-PM.jpg" alt="" className="girlimage" />
+      <img src="https://i.ibb.co/h1rC4VNJ/Whats-App-Image-2025-12-29-at-4-04-37-PM.jpg" alt="Mounika Burri - Front-End React Developer" className="girlimage" />
       <h1>
         <span>I am Mounika,</span> Front-End React Developer
       </h1>

@@ -1,7 +1,6 @@
 import React from "react";
 import theme from "./assets/theme.svg";
 import mywork_data from "./assets/mywork_data";
-import arrow_icon from "./assets/arrow_icon.svg";
 import "./work.css";
 function Work() {
   return (
@@ -12,17 +11,21 @@ function Work() {
       </div>
       <div className="work-card">
         {mywork_data.map((item, index) => (
-          <div key={index}>
-            <img src={item.w_img} alt="" />
+          <div key={index} className="work-card-item">
+            <div className="work-card-image-wrapper">
+              <img src={item.w_img} alt={item.w_name} className="work-card-img" />
+              <div className="work-card-overlay">
+                <h3 className="work-card-title">{item.w_name}</h3>
+                <div className="work-card-number">#{item.w_no}</div>
+              </div>
+            </div>
           </div>
         ))}
       </div>
       <div className="mywork-button">
         <button className="show-button">
           Show More
-          <span className="icon-img">
-            <img src={arrow_icon} alt="" className="icon" />
-          </span>
+          <span className="arrow-icon">→</span>
         </button>
       </div>
     </div>

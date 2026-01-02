@@ -1,19 +1,16 @@
 import React from "react";
-import Navbar from "./Navbar";
-
-import Profile from "./Profile";
-
-import About from "./About";
-
-import Work from "./work";
-import Contact from "./Contact";
-import Footer from "./Footer";
+import Navbar from "./Navbar.jsx";
+import Profile from "./Profile.jsx";
+import About from "./About.jsx";
+import Work from "./Work.jsx";
+import Contact from "./Contact.jsx";
+import Footer from "./Footer.jsx";
+import "./App.css";
 
 function App() {
   return (
-    <div>
+    <div className="app">
       <Navbar />
-
       <Profile />
       <About />
       <Work />
